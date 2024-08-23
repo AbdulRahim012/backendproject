@@ -17,7 +17,6 @@ try {
     const user = await User.findById(decodedToken?._id).select("-password -refreshToken")
 
     if (!user) {
-        
         throw new ApiError(401, "Invalid Access Token")
     }
 

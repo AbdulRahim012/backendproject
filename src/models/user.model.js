@@ -38,15 +38,19 @@ const userSchema= new Schema(
             type: String,
         },
 
-        watchHistory: {
-            type: Schema.Types.ObjectId,
-            ref: "Video"
-        },
+        watchHistory:[
+            {
+                type: Schema.Types.ObjectId,
+                ref: "Video"
+            }
+        
+        ],
 
         avatar: {
             type: String,
             required: true,
         },
+        
         refreshToken: {
             type: String,
         }
